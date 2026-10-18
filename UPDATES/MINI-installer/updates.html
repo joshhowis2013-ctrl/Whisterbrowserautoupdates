@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Whister Project — Auto-Update Infrastructure</title>
+</head>
+<body>
+
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <!-- Sidebar Navigation Panel -->
+            <td valign="top" width="160" style="padding-right: 20px; border-right: 1px solid #ccc;">
+                <p><strong>Whister Navigation</strong></p>
+                <ul>
+                    <li><a href="index.html">Main Directory</a></li>
+                    <li><a href="https://github.com" target="_blank">Source Code (GitHub)</a></li>
+                </ul>
+                <hr>
+                <p><strong>Active Endpoints</strong></p>
+                <ul>
+                    <li><a href="https://whisterbrowser.com" target="_blank">POST Beta API Check</a></li>
+                    <li><a href="https://whisterbrowser.com">Latest Binary Stub</a></li>
+                </ul>
+            </td>
+            
+            <!-- Main Content Area -->
+            <td valign="top" style="padding-left: 20px;">
+                <h1>Whister Infrastructure: Automated Update Matrix</h1>
+                <p>This serverless directory serves as the official operational configuration record for Whister's automated update system. Background version tracking, binary distribution, and patch deployment routines are routed through these dedicated domain endpoints.</p>
+                
+                <hr>
+                
+                <h2>Network Routing & Asset Storage Mappings</h2>
+                <p>All network traffic parameters are handled via our domain arrays to prevent heavy load dependency cycles on source code version repositories.</p>
+                
+                <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+                    <thead>
+                        <tr bgcolor="#eee">
+                            <th>Target URL Subdomain / Path</th>
+                            <th>Backend Platform Architecture</th>
+                            <th>Functional Deployment Role</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>https://whisterbrowser.com</code></td>
+                            <td>Cloudflare Workers (Beta Staging Runtime)</td>
+                            <td>Intercepts incoming test client JSON strings, parses experimental version parameters, and serves beta patch manifests.</td>
+                        </tr>
+                        <tr>
+                            <td><code>https://whisterbrowser.com</code></td>
+                            <td>Cloudflare R2 Storage Pool</td>
+                            <td>Delivers the production Windows background executable block to clients silently with zero egress fees.</td>
+                        </tr>
+                        <tr>
+                            <td><code>https://whisterbrowser.com[version].patch</code></td>
+                            <td>Cloudflare R2 Storage Pool</td>
+                            <td>Provides compressed, raw structural text diff blocks for lightweight source patches.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <hr>
+
+                <h2>Automated Execution Protocol Pipeline</h2>
+                <p>The internal C++ thread layer coordinates with the network storage layout according to this three-tier execution loop sequence:</p>
+                
+                <table border="1" cellpadding="6" cellspacing="0" style="border-collapse: collapse; margin-top: 10px;">
+                    <tr bgcolor="#f9f9f9">
+                        <td><strong>Stage 1: The Request</strong></td>
+                        <td>The browser calls <code>WhisterSettingsHandler::TriggerServerUpdateCheck</code>, transmitting a quick payload string container to the staging subdomain: <br>
+                        <code>{"version": "158.0.8105.0"}</code></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Stage 2: The Parsing</strong></td>
+                        <td>The Cloudflare Edge Beta Worker script interprets the JSON payload, cross-checks version strings, and replies with an update instruction block pointing to the staging patch assets.</td>
+                    </tr>
+                    <tr bgcolor="#f9f9f9">
+                        <td><strong>Stage 3: The Deployment</strong></td>
+                        <td>The browser client downloads the target chunk asynchronously into the local temp folder and executes the background process silently via <code>base::LaunchProcess</code>.</td>
+                    </tr>
+                </table>
+
+                <hr>
+
+                <h2>API Maintenance & Status Logs</h2>
+                <ul>
+                    <li><strong>Server Domain State:</strong> Staging channel separated via Cloudflare DNS record configurations.</li>
+                    <li><strong>Bandwidth Overhead Strategy:</strong> Cloudflare R2 structure completely blocks bandwidth egress billing surprises when serving installers.</li>
+                    <li><strong>Client Content-Type Matrix:</strong> Requests must explicitly declare <code>application/json</code> headers.</li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+
+    <hr>
+    <center>
+        <small>© 2026 The Whister Project Authors. All rights reserved.</small>
+    </center>
+
+</body>
+</html>
