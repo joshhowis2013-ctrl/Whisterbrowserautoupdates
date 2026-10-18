@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Whister Browser — Privacy Policy</title>
+</head>
+<body>
+
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <!-- Sidebar Navigation Panel -->
+            <td valign="top" width="160" style="padding-right: 20px; border-right: 1px solid #ccc;">
+                <p><strong>Whister Navigation</strong></p>
+                <ul>
+                    <li><a href="index.html">Main Directory</a></li>
+                    <li><a href="updates.html">Update Matrix</a></li>
+                    <li><a href="https://github.com" target="_blank">Source Code (GitHub)</a></li>
+                </ul>
+                <hr>
+                <p><strong>Legal & Trust</strong></p>
+                <ul>
+                    <li><a href="#collection">Data Collection</a></li>
+                    <li><a href="#updater">Update Privacy</a></li>
+                    <li><a href="#cookies">Cookies Policy</a></li>
+                </ul>
+            </td>
+            
+            <!-- Main Content Area -->
+            <td valign="top" style="padding-left: 20px;">
+                <!-- Official Project Branding Asset Header -->
+                <div style="margin-top: 15px; margin-bottom: 20px; background-color: #000; padding: 15px; border-radius: 4px; display: inline-block;">
+                    <img src="logo.png" alt="Whister Browser Logo" width="320" style="display: block;">
+                </div>
+
+                <h1>Whister Browser Project Privacy Policy</h1>
+                <p><strong>Effective Date:</strong> 18 October 2026</p>
+                <p>Whister is an independent web browser built for speed, transparency, and personal customization. We believe your data belongs exclusively to you. This policy explicitly documents our data minimization structures, server network boundaries, and automated update parameters.</p>
+                
+                <hr>
+                
+                <h2 id="collection">1. Zero-Telemetry Data Collection</h2>
+                <p>Unlike standard stock browsers, Whister is engineered from the ground up to eliminate baseline diagnostic reporting loop junk.</p>
+                <ul>
+                    <li><strong>No Browsing History Collection:</strong> Your web search history, visited domains, and downloaded files remain entirely localized inside your local client profile tree (<code>AppData\Local\Chromium\User Data\</code>) and are never transmitted to our infrastructure.</li>
+                    <li><strong>No User Accounts:</strong> Whister does not feature profile synchronisation or authentication clouds. There is no sign-in requirement, and we do not maintain individual usage portfolios.</li>
+                    <li><strong>Upstream Search Controls:</strong> When utilizing the New Tab search engine routing selector panel matrix, queries are passed directly to your chosen provider (DuckDuckGo, Brave, or Google). Whister never intercepts or logs your parameters.</li>
+                </ul>
+
+                <hr>
+
+                <h2 id="updater">2. Automated Update Server Operations</h2>
+                <p>To deliver automated engine patches, the internal C++ layer securely coordinates with our staging subdomain endpoints using automated version cross-checks.</p>
+                <ul>
+                    <li><strong>Automated Request Payload:</strong> When checking for updates via your UI settings panel, the browser transmits a minimalist, standardized JSON string container tracking solely your current software configuration: <br>
+                    <code>{"version": "158.0.8105.0"}</code></li>
+                    <li><strong>Edge Processing Layer:</strong> This payload is analyzed strictly on the fly by Cloudflare serverless runtimes at <code>://whisterbrowser.com</code> to evaluate your file needs. We do not store, log, or track your machine's physical IP address during these update verification checks.</li>
+                    <li><strong>Asset Distribution Security:</strong> All installation packages (<code>mini_installer.exe</code>) and text patch configurations are distributed via secure, HTTPS-encrypted Cloudflare R2 storage arrays.</li>
+                </ul>
+
+                <hr>
+
+                <h2 id="cookies">3. Cookies and Third-Party Assets</h2>
+                <ul>
+                    <li><strong>Website Analytics:</strong> Our static documentation directory pages do not use third-party tracking pixels, marketing cookies, or user fingerprinting scripts.</li>
+                    <li><strong>External Repositories:</strong> Links pointing directly to our release installation assets are served via GitHub, which is governed independently by GitHub's corporate data provisions.</li>
+                </ul>
+
+                <hr>
+
+                <h2>4. Compliance & Contact</h2>
+                <p>Because the browser project is completely open-source, you can trace our execution network parameters line-for-line right inside our public workspace code tree repository files at any time.</p>
+                <p>For configuration inquiries or architecture tracking requests, open an issue ticket directly on the Whister project repository console page.</p>
+            </td>
+        </tr>
+    </table>
+
+    <hr>
+    <center>
+        <small>© 2026 The Whister Project Authors. Built for privacy, verified one rebuild at a time.</small>
+    </center>
+
+</body>
+</html>
